@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">Invoice Generator</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="invoice-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="invoce-box">
+                        <div class="row justify-content-between">
+                            <div class="col-sm-3">
+                                <div class="upload">
+                                    <img src="images/upload.svg" alt="">
+                                    <input type="file">
+                                </div>
+                            </div>
+                            <div class="col-sm-4 invoice-id">
+                                <h4>Invoice</h4>
+                                <div class="input-box">
+                                    <div class="box">
+                                        <i class="ri-hashtag"></i>
+                                        <input type="text" placeholder="Invoice ID">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt-5">
+                        <div class="row pt-3">
+                            <div class="col-sm-8">
+                                <div class="input-box">
+                                    <label for="">Company name</label>
+                                    <div class="box">
+                                        <i class="ri-hashtag"></i>
+                                        <input type="text" placeholder="Who is this invoice from? (required)">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="input-box">
+                                    <label for="">Date</label>
+                                    <div class="box">
+                                        <i class="ri-hashtag"></i>
+                                        <input type="date" placeholder="24/12/2021">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="input-box">
+                                    <label for="">Bill To</label>
+                                    <div class="box">
+                                        <i class="ri-hashtag"></i>
+                                        <input type="text" placeholder="Who is this invoice to?">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="input-box">
+                                    <label for="">Ship To</label>
+                                    <div class="box">
+                                        <i class="ri-hashtag"></i>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="input-box">
+                                    <label for="">Due Date</label>
+                                    <div class="box">
+                                        <i class="ri-hashtag"></i>
+                                        <input type="date" placeholder="24/12/2021">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mt-5">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="sidebar">
+                        <a href="" class="btn mb-4"><i class="ri-mail-send-line"></i> Send invoice </a>
+                        <a href="" class="btn outline"><i class="ri-download-cloud-2-line"></i> Download invoice </a>
+                        <div class="input-box white">
+                            <label for="">Currency</label>
+                            <div class="box">
+                                <i class="ri-hashtag"></i>
+                                <select name="" id="">
+                                    <option value="">USD</option>
+                                    <option value="">INR</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

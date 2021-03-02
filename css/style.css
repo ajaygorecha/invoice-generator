@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+*, *, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  outline: none;
+}
+
+*:focus, *:focus, *:after:focus, *:before:focus {
+  outline: none !important;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+div, header, nav, footer, section, aside, article {
+  display: block;
+}
+
+p, span, li {
+  color: #7B7B7B;
+}
+
+a {
+  color: #1577EA;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #1577EA;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  background-color: #1577EA;
+  color: #fff;
+  box-shadow: 0px 8px 12px rgba(21, 119, 234, 0.3);
+}
+
+.btn:hover {
+  color: #fff;
+  box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3);
+}
+
+.btn i {
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: #1577EA;
+  box-shadow: none !important;
+  border: 1px solid #1577EA;
+}
+
+.btn.outline:hover {
+  box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3);
+  background-color: #1577EA;
+  color: #fff;
+}
+
+.btn.outline i {
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.input-box {
+  display: flex;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.input-box .box {
+  display: flex;
+  background-color: #F1F3F6;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.input-box label {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  color: #414141;
+}
+
+.input-box input, .input-box select, .input-box textarea {
+  width: calc( 100% - 45px);
+  background-color: transparent;
+  border: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.input-box input:focus, .input-box select:focus, .input-box textarea:focus {
+  outline: #1577EA solid 1px !important;
+}
+
+.input-box select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none;
+  text-indent: 1px;
+}
+
+.input-box i {
+  width: 45px;
+  height: 45px;
+  background-color: #1577EA;
+  color: #fff;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+.input-box.white {
+  display: flex;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.input-box.white .box {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.input-box.white label {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  color: #414141;
+}
+
+.input-box.white input, .input-box.white select, .input-box.white textarea {
+  width: calc( 100% - 45px);
+  background-color: transparent;
+  border: 0;
+  padding-left: 10px;
+}
+
+.input-box.white input:focus, .input-box.white select:focus, .input-box.white textarea:focus {
+  outline: #1577EA solid 1px !important;
+}
+
+.input-box.white i {
+  width: 45px;
+  height: 45px;
+  background-color: #1577EA;
+  color: #fff;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+header {
+  background-color: #1577EA;
+  padding: 10px 0;
+  box-shadow: 0px 12px 24px rgba(21, 119, 234, 0.3);
+  z-index: 10;
+}
+
+header a {
+  color: #fff;
+}
+
+header a:hover {
+  color: #fff;
+}
+
+header a.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+header a.navbar-brand:hover {
+  color: #fff;
+}
+
+.invoice-wrapper {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #F1F3F6;
+}
+
+.invoice-wrapper .sidebar .btn {
+  min-width: 270px;
+}
+
+.invoice-wrapper .invoce-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 50px rgba(21, 119, 234, 0.05);
+}
+
+.invoice-wrapper .invoce-box .upload input {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height: 100%;
+  cursor: pointer;
+}
+
+.invoice-wrapper .invoce-box .invoice-id h1, .invoice-wrapper .invoce-box .invoice-id h2, .invoice-wrapper .invoce-box .invoice-id h3, .invoice-wrapper .invoce-box .invoice-id h4, .invoice-wrapper .invoce-box .invoice-id h5, .invoice-wrapper .invoce-box .invoice-id h6 {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #1577EA;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
