@@ -11,6 +11,7 @@
 
 *:focus, *:focus, *:after:focus, *:before:focus {
   outline: none !important;
+  box-shadow: none !important;
 }
 
 html, body {
@@ -59,6 +60,11 @@ img {
   background-color: #1577EA;
   color: #fff;
   box-shadow: 0px 8px 12px rgba(21, 119, 234, 0.3);
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3) !important;
 }
 
 .btn:hover {
@@ -245,4 +251,76 @@ header a.navbar-brand:hover {
   color: #1577EA;
   font-size: 32px;
   margin-bottom: 15px;
+}
+
+.invoice-wrapper .invoice-table table {
+  display: block;
+  width: 100%;
+}
+
+.invoice-wrapper .invoice-table table input {
+  border: 0;
+  width: 100%;
+}
+
+.invoice-wrapper .invoice-table table tr:first-child th:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.invoice-wrapper .invoice-table table tr:first-child th:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.invoice-wrapper .invoice-table table tr:first-child td, .invoice-wrapper .invoice-table table tr:first-child th {
+  background-color: #333333;
+  padding: 10px 12px;
+  color: #fff;
+}
+
+.invoice-wrapper .invoice-table table tr:first-child td p, .invoice-wrapper .invoice-table table tr:first-child th p {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.invoice-wrapper .invoice-table table tr:first-child td:fisrt-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.invoice-wrapper .invoice-table table tr td {
+  background-color: #fff;
+}
+
+.invoice-wrapper .invoice-table table tr td:nth-child(2) {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.invoice-wrapper .invoice-table table tr td:nth-child(3) {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.invoice-wrapper .invoice-table table tr td p {
+  border: 1px solid #ABABAB;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 10px 7px;
+  display: flex;
+}
+
+.invoice-wrapper .invoice-table table tr td:first-child {
+  min-width: 470px;
+}
+
+.invoice-wrapper .invoice-table table tr td:first-child p {
+  border-radius: 6px 0 0 6px;
+}
+
+.invoice-wrapper .invoice-table table tr td:last-child {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.invoice-wrapper .invoice-table table tr td:last-child p {
+  border-radius: 0 6px 6px 0;
 }

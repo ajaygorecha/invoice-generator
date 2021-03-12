@@ -25,6 +25,7 @@ $dgrey: #7B7B7B
     outline: none
     &:focus
         outline: none !important
+        box-shadow: none !important
 
 html,body
     font-family: $font
@@ -61,6 +62,9 @@ img
     background-color: $b
     color: $w
     box-shadow: 0px 8px 12px rgba(21, 119, 234, 0.3)
+    &:focus
+        outline: none !important
+        box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3) !important
     &:hover
         color: $w
         box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3)
@@ -201,3 +205,49 @@ header
                 color: $b
                 font-size: 32px
                 margin-bottom: 15px
+    .invoice-table
+        table
+            display: block
+            width: 100%
+            input
+                border: 0
+                width: 100%
+            tr:first-child
+                th
+                    &:first-child
+                        border-radius: 6px 0 0 6px
+                    &:last-child
+                        border-radius: 0 6px 6px 0
+                td,th
+                    background-color: $blk
+                    padding: 10px 12px
+                    color: $w
+                    p
+                        margin-bottom: 0
+                        color: $w
+                td:fisrt-child
+                    border-radius: 4px 0 0 4px
+            tr
+                td
+                    background-color: $w
+                    &:nth-child(2)
+                        min-width: 100px
+                        max-width: 100px
+                    &:nth-child(3)
+                        min-width: 100px
+                        max-width: 100px
+                    p
+                        border: 1px solid #ABABAB
+                        margin-bottom: 5px
+                        margin-top: 10px
+                        padding: 10px 7px
+                        display: flex
+                td:first-child
+                    min-width: 470px
+                    p
+                        border-radius: 6px 0 0 6px
+                td:last-child
+                    min-width: 100px
+                    max-width: 100px
+                    p
+                        border-radius: 0 6px 6px 0
