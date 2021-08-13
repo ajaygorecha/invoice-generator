@@ -5,13 +5,15 @@
   margin: 0;
   padding: 0;
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
 }
 
 *:focus, *:focus, *:after:focus, *:before:focus {
   outline: none !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 html, body {
@@ -59,17 +61,20 @@ img {
 .btn {
   background-color: #1577EA;
   color: #fff;
-  box-shadow: 0px 8px 12px rgba(21, 119, 234, 0.3);
+  -webkit-box-shadow: 0px 8px 12px rgba(21, 119, 234, 0.3);
+          box-shadow: 0px 8px 12px rgba(21, 119, 234, 0.3);
 }
 
 .btn:focus {
   outline: none !important;
-  box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3) !important;
+  -webkit-box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3) !important;
+          box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3) !important;
 }
 
 .btn:hover {
   color: #fff;
-  box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3);
+  -webkit-box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3);
+          box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3);
 }
 
 .btn i {
@@ -80,12 +85,14 @@ img {
 .btn.outline {
   background-color: transparent;
   color: #1577EA;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   border: 1px solid #1577EA;
 }
 
 .btn.outline:hover {
-  box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3);
+  -webkit-box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3);
+          box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3);
   background-color: #1577EA;
   color: #fff;
 }
@@ -96,15 +103,23 @@ img {
 }
 
 .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 8px;
-  flex-wrap: wrap;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
 .input-box .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #F1F3F6;
   width: 100%;
@@ -112,7 +127,9 @@ img {
 }
 
 .input-box label {
-  flex: 0 0 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   max-width: 100%;
   width: 100%;
   display: block;
@@ -143,20 +160,29 @@ img {
   background-color: #1577EA;
   color: #fff;
   border-radius: 4px;
+  display: -ms-grid;
   display: grid;
   place-content: center;
 }
 
 .input-box.white {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 8px;
-  flex-wrap: wrap;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
 .input-box.white .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #fff;
   width: 100%;
@@ -164,7 +190,9 @@ img {
 }
 
 .input-box.white label {
-  flex: 0 0 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   max-width: 100%;
   width: 100%;
   display: block;
@@ -188,6 +216,7 @@ img {
   background-color: #1577EA;
   color: #fff;
   border-radius: 4px;
+  display: -ms-grid;
   display: grid;
   place-content: center;
 }
@@ -195,7 +224,8 @@ img {
 header {
   background-color: #1577EA;
   padding: 10px 0;
-  box-shadow: 0px 12px 24px rgba(21, 119, 234, 0.3);
+  -webkit-box-shadow: 0px 12px 24px rgba(21, 119, 234, 0.3);
+          box-shadow: 0px 12px 24px rgba(21, 119, 234, 0.3);
   z-index: 10;
 }
 
@@ -230,7 +260,8 @@ header a.navbar-brand:hover {
   background-color: #fff;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0px 0px 50px rgba(21, 119, 234, 0.05);
+  -webkit-box-shadow: 0px 0px 50px rgba(21, 119, 234, 0.05);
+          box-shadow: 0px 0px 50px rgba(21, 119, 234, 0.05);
 }
 
 .invoice-wrapper .invoce-box .upload input {
@@ -305,6 +336,8 @@ header a.navbar-brand:hover {
   margin-bottom: 5px;
   margin-top: 10px;
   padding: 10px 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -324,3 +357,52 @@ header a.navbar-brand:hover {
 .invoice-wrapper .invoice-table table tr td:last-child p {
   border-radius: 0 6px 6px 0;
 }
+
+.notes .sub-total {
+  border-bottom: 1px dashed #7B7B7B;
+}
+
+.notes .add-btns {
+  padding-top: 20px;
+}
+
+.notes .add-btns .link {
+  background-color: transparent;
+  border: none;
+  color: #1577EA;
+  text-decoration: underline;
+}
+
+.notes .inner-total {
+  padding-top: 30px;
+}
+
+.notes .inner-total table {
+  display: block;
+  width: 100%;
+}
+
+.notes .inner-total table td {
+  min-width: 130px;
+}
+
+.notes .discount .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #F1F3F6;
+}
+
+.notes .discount .input-box input, .notes .discount .input-box select, .notes .discount .input-box textarea {
+  padding: 10px;
+}
+
+.notes .discount .input-box select {
+  max-width: 85px;
+  -webkit-appearance: textfield !important;
+  margin-right: 10px;
+  border-right: 1px solid #7B7B7B;
+}
+/*# sourceMappingURL=style.css.map */
