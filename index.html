@@ -109,40 +109,44 @@
                         <hr class="mt-5 mb-5">
                         <div class="invoice-table">
                             <div class="in-table">
-                                <table>
-                                    <tr>
-                                        <th>
-                                            <p>Item name</p>
-                                        </th>
-                                        <th>
-                                            <p>Quantity</p>
-                                        </th>
-                                        <th>
-                                            <p>Rate</p>
-                                        </th>
-                                        <th>
-                                            <p>Amount</p>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>
-                                                <input type="text" placeholder="Description of service or product...">
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p>
-                                                <input type="text" placeholder="Quantity">
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p class="d-flex"><span class="d-block">$</span> <input type="text" placeholder="0.00"> </p>
-                                        </td>
-                                        <td>
-                                            <p class="d-flex">$<span class="d-block">0.00</span></p>
-                                            <button class="remove-item"><i class="ri-close-line"></i></button>
-                                        </td>
-                                    </tr>
+                                <table id="itemtable">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <p>Item name</p>
+                                            </th>
+                                            <th>
+                                                <p>Quantity</p>
+                                            </th>
+                                            <th>
+                                                <p>Rate</p>
+                                            </th>
+                                            <th>
+                                                <p>Amount</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    <input type="text" placeholder="Description of service or product...">
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    <input type="text" placeholder="Quantity">
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="d-flex"><span class="d-block">$</span> <input type="text" placeholder="0.00"> </p>
+                                            </td>
+                                            <td>
+                                                <p class="d-flex">$<span class="d-block">0.00</span></p>
+                                                <button class="remove-item" onclick="deleteRow(this)"><i class="ri-close-line"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>                                    
                                 </table>
                                 <div class="text-right mt-3">
                                     <button class="btn add-item"><i class="ri-add-line"></i> Add Item</button>
@@ -176,21 +180,42 @@
                                         </div>
                                     </div>
                                     <div class="discount">
-                                        <div class="tax-item">
+                                        <div class="tax-item d-none">
                                             <div class="input-box">
                                                 <select name="" id="">
                                                     <option value="">Fixed</option>
                                                     <option value="">%</option>
                                                 </select>
                                                 <input type="text" placeholder="Enter Tax">
+                                                <button class="remove-item tax-item-close"><i class="ri-close-line"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="discount-item  d-none">
+                                            <div class="input-box">
+                                                <select name="" id="">
+                                                    <option value="">Fixed</option>
+                                                    <option value="">%</option>
+                                                </select>
+                                                <input type="text" placeholder="Enter Discount">
+                                                <button class="remove-item discount-item-close"><i class="ri-close-line"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="shiping-item d-none">
+                                            <div class="input-box">
+                                                <select name="" id="">
+                                                    <option value="">Fixed</option>
+                                                    <option value="">%</option>
+                                                </select>
+                                                <input type="text" placeholder="Enter Shiping">
+                                                <button class="remove-item shiping-item-close"><i class="ri-close-line"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="add-btns">
                                         <ul class="d-flex justify-content-between">
-                                            <li><button class="link">+ Tax</button></li>
-                                            <li><button class="link">+ Discount</button></li>
-                                            <li><button class="link">+ Shiping</button></li>
+                                            <li><button class="link add-tax">+ Tax</button></li>
+                                            <li><button class="link add-discount">+ Discount</button></li>
+                                            <li><button class="link add-shiping">+ Shiping</button></li>
                                         </ul>
                                     </div>
                                     <div class="inner-total">

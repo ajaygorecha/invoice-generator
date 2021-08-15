@@ -116,7 +116,7 @@ img
         -webkit-appearance: none !important
         -moz-appearance: none
         text-indent: 1px
-    i
+    i:not(.ri-close-line)
         width: 45px
         height: 45px
         background-color: $b
@@ -230,21 +230,22 @@ header
             input
                 border: 0
                 width: 100%
-            tr:first-child
-                th
-                    &:first-child
-                        border-radius: 6px 0 0 6px
-                    &:last-child
-                        border-radius: 0 6px 6px 0
-                td,th
-                    background-color: $blk
-                    padding: 10px 12px
-                    color: $w
-                    p
-                        margin-bottom: 0
+            thead
+                tr
+                    th
+                        &:first-child
+                            border-radius: 6px 0 0 6px
+                        &:last-child
+                            border-radius: 0 6px 6px 0
+                    td,th
+                        background-color: $blk
+                        padding: 10px 12px
                         color: $w
-                td:fisrt-child
-                    border-radius: 4px 0 0 4px
+                        p
+                            margin-bottom: 0
+                            color: $w
+                    td:fisrt-child
+                        border-radius: 4px 0 0 4px
             tr
                 &:hover
                     button
@@ -315,4 +316,19 @@ header
                 -webkit-appearance: textfield !important
                 margin-right: 10px
                 border-right: 1px solid $dgrey
-                
+            &:hover
+                .remove-item
+                    opacity: 1
+        .remove-item
+            position: absolute
+            right: -10px
+            top: 10px
+            width: 20px
+            height: 20px
+            display: grid
+            place-content: center
+            background-color: red !important
+            color: $w
+            border: 0
+            border-radius: 30px
+            opacity: 0
