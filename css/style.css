@@ -264,6 +264,10 @@ header a.navbar-brand:hover {
           box-shadow: 0px 0px 50px rgba(21, 119, 234, 0.05);
 }
 
+.invoice-wrapper .invoce-box .upload {
+  overflow: hidden;
+}
+
 .invoice-wrapper .invoce-box .upload input {
   position: absolute;
   opacity: 0;
@@ -275,6 +279,12 @@ header a.navbar-brand:hover {
   cursor: pointer;
 }
 
+.invoice-wrapper .invoce-box .upload img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .invoice-wrapper .invoce-box .invoice-id h1, .invoice-wrapper .invoce-box .invoice-id h2, .invoice-wrapper .invoce-box .invoice-id h3, .invoice-wrapper .invoce-box .invoice-id h4, .invoice-wrapper .invoce-box .invoice-id h5, .invoice-wrapper .invoce-box .invoice-id h6 {
   text-align: right;
   text-transform: uppercase;
@@ -282,6 +292,31 @@ header a.navbar-brand:hover {
   color: #1577EA;
   font-size: 32px;
   margin-bottom: 15px;
+}
+
+.invoice-wrapper .invoce-box .preview {
+  position: absolute;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  width: calc( 100% + 2px);
+  left: -1px;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  height: calc( 100% + 2px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .invoice-wrapper .invoice-table table {
@@ -317,6 +352,10 @@ header a.navbar-brand:hover {
   border-radius: 4px 0 0 4px;
 }
 
+.invoice-wrapper .invoice-table table tr:hover button {
+  opacity: 1;
+}
+
 .invoice-wrapper .invoice-table table tr td {
   background-color: #fff;
 }
@@ -339,6 +378,22 @@ header a.navbar-brand:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.invoice-wrapper .invoice-table table tr td button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  top: 23px;
+  background-color: red;
+  border: 0;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  border-radius: 24px;
+  color: #fff;
+  opacity: 0;
 }
 
 .invoice-wrapper .invoice-table table tr td:first-child {

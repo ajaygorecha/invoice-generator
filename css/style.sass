@@ -188,6 +188,7 @@ header
         border-radius: 8px
         box-shadow: 0px 0px 50px rgba(21, 119, 234, 0.05)
         .upload
+            overflow: hidden
             input
                 position: absolute
                 opacity: 0
@@ -197,6 +198,9 @@ header
                 z-index: 2
                 height: 100%
                 cursor: pointer
+            img
+                height: 100%
+                object-fit: contain
         .invoice-id
             h1,h2,h3,h4,h5,h6
                 text-align: right
@@ -205,6 +209,20 @@ header
                 color: $b
                 font-size: 32px
                 margin-bottom: 15px
+        .preview
+            position: absolute
+            z-index: 2
+            user-select: none
+            pointer-events: none
+            width: calc( 100% + 2px  )
+            left: -1px
+            top: -1px
+            bottom: -1px
+            right: -1px
+            height: calc( 100% + 2px  )
+            display: flex
+            justify-content: center
+            align-items: center
     .invoice-table
         table
             display: block
@@ -228,6 +246,9 @@ header
                 td:fisrt-child
                     border-radius: 4px 0 0 4px
             tr
+                &:hover
+                    button
+                        opacity: 1
                 td
                     background-color: $w
                     &:nth-child(2)
@@ -242,6 +263,19 @@ header
                         margin-top: 10px
                         padding: 10px 7px
                         display: flex
+                    button
+                        position: absolute
+                        width: 20px
+                        height: 20px
+                        right: -10px
+                        top: 23px
+                        background-color: red
+                        border: 0
+                        display: grid
+                        place-content: center
+                        border-radius: 24px
+                        color: $w
+                        opacity: 0
                 td:first-child
                     min-width: 470px
                     p

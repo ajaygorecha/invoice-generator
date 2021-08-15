@@ -40,9 +40,12 @@
                     <div class="invoce-box">
                         <div class="row justify-content-between">
                             <div class="col-sm-3">
-                                <div class="upload">
+                                <div class="upload img-dragger">
                                     <img src="images/upload.svg" alt="">
-                                    <input type="file">
+                                    <input type="file" class="dragger">
+                                    <div class="preview">
+                                        <img src="" class="dragger-preview" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-4 invoice-id">
@@ -137,29 +140,12 @@
                                         </td>
                                         <td>
                                             <p class="d-flex">$<span class="d-block">0.00</span></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>
-                                                <input type="text" placeholder="Description of service or product...">
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p>
-                                                <input type="text" placeholder="Quantity">
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p class="d-flex"><span class="d-block">$</span> <input type="text" placeholder="0.00"> </p>
-                                        </td>
-                                        <td>
-                                            <p class="d-flex">$<span class="d-block">0.00</span></p>
+                                            <button class="remove-item"><i class="ri-close-line"></i></button>
                                         </td>
                                     </tr>
                                 </table>
                                 <div class="text-right mt-3">
-                                    <button class="btn"><i class="ri-add-line"></i> Add Item</button>
+                                    <button class="btn add-item"><i class="ri-add-line"></i> Add Item</button>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +214,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="sidebar">
-                        <a href="" class="btn mb-4"><i class="ri-mail-send-line"></i> Send invoice </a>
+                        <a href="#sendinvoice" class="btn mb-4" data-toggle="modal" data-target="#sendinvoice"><i class="ri-mail-send-line"></i> Send invoice </a>
                         <a href="" class="btn outline"><i class="ri-download-cloud-2-line"></i> Download invoice </a>
                         <div class="input-box white">
                             <label for="">Currency</label>
@@ -245,6 +231,40 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="sendinvoice" tabindex="-1">
+        <div class="modal-dialog modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Send invoice</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ri-close-line"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-box">
+                        <label for="">Enter Your email address</label>
+                        <div class="box">
+                            <i class="ri-mail-unread-line"></i>
+                            <input type="text" placeholder="example@email.com">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn outline" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/vue.min.js"></script>
+    
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/script.js"> </script>
 
 </body>
 
