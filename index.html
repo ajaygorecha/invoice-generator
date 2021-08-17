@@ -130,20 +130,23 @@
                                         <tr>
                                             <td>
                                                 <p>
-                                                    <input type="text" placeholder="Description of service or product...">
+                                                    <input type="text" placeholder="Description of service or product..." id = "desc1">
                                                 </p>
                                             </td>
                                             <td>
                                                 <p>
-                                                    <input type="text" placeholder="Quantity">
+                                                    <input type="text" id="quat0" placeholder="Quantity" onkeyup="calcPrice(this)" onkeypress="return isNumberKey(event)">
                                                 </p>
                                             </td>
                                             <td>
-                                                <p class="d-flex"><span class="d-block">$</span> <input type="text" placeholder="0.00"> </p>
+                                                <p class="d-flex">
+                                                    <span class="d-block">$</span> 
+                                                    <input type="text" id= "rate0" placeholder="0.00" onkeyup="calcPrice(this)" onkeypress="return isNumberKey(event)"> 
+                                                </p>
                                             </td>
                                             <td>
-                                                <p class="d-flex">$<span class="d-block">0.00</span></p>
-                                                <button class="remove-item" onclick="deleteRow(this)"><i class="ri-close-line"></i></button>
+                                                <p class="d-flex" id="price0">$0.00</p>
+                                                <button class="remove-item" id="del0" onclick="deleteRow(this)"><i class="ri-close-line"></i></button>
                                             </td>
                                         </tr>
                                     </tbody>                                    
@@ -176,38 +179,38 @@
                                     <div class="sub-total">
                                         <div class="d-flex justify-content-between">
                                             <p>Subtotal</p>
-                                            <p>$120.00</p>
+                                            <p id="subtotal">$0.00</p>
                                         </div>
                                     </div>
                                     <div class="discount">
                                         <div class="tax-item d-none">
                                             <div class="input-box">
-                                                <select name="" id="">
-                                                    <option value="">Fixed</option>
-                                                    <option value="">%</option>
+                                                <select name="" id="tax_type">
+                                                    <option value="fixed">Fixed</option>
+                                                    <option value="percent">%</option>
                                                 </select>
-                                                <input type="text" placeholder="Enter Tax">
-                                                <button class="remove-item tax-item-close"><i class="ri-close-line"></i></button>
+                                                <input type="text" placeholder="Enter Tax" id="tax" onkeypress="return isNumberKey(event)">
+                                                <button class="remove-item tax-item-close" id="tax_btn"><i class="ri-close-line"></i></button>
                                             </div>
                                         </div>
                                         <div class="discount-item  d-none">
                                             <div class="input-box">
-                                                <select name="" id="">
-                                                    <option value="">Fixed</option>
-                                                    <option value="">%</option>
+                                                <select name="" id="dis_type">
+                                                    <option value="fixed">Fixed</option>
+                                                    <option value="percent">%</option>
                                                 </select>
-                                                <input type="text" placeholder="Enter Discount">
-                                                <button class="remove-item discount-item-close"><i class="ri-close-line"></i></button>
+                                                <input type="text" placeholder="Enter Discount" id="discount" onkeypress="return isNumberKey(event)">
+                                                <button class="remove-item discount-item-close" id="discount_btn"><i class="ri-close-line"></i></button>
                                             </div>
                                         </div>
                                         <div class="shiping-item d-none">
                                             <div class="input-box">
-                                                <select name="" id="">
-                                                    <option value="">Fixed</option>
-                                                    <option value="">%</option>
+                                                <select name="" id="ship_type">
+                                                    <option value="fixed">Fixed</option>
+                                                    <option value="percent">%</option>
                                                 </select>
-                                                <input type="text" placeholder="Enter Shiping">
-                                                <button class="remove-item shiping-item-close"><i class="ri-close-line"></i></button>
+                                                <input type="text" placeholder="Enter Shiping" id="ship" onkeypress="return isNumberKey(event)">
+                                                <button class="remove-item shiping-item-close" id="ship_btn"><i class="ri-close-line"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -220,16 +223,31 @@
                                     </div>
                                     <div class="inner-total">
                                         <div class="d-flex justify-content-between">
+                                            <p>Tax</p>
+                                            <p id="tax_p">$0.00</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p>Discount</p>
+                                            <p id="discount_p">$0.00</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p>Shipping</p>
+                                            <p id="ship_p">$0.00</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
                                             <p>Total</p>
-                                            <p>$120.00</p>
+                                            <p id="total">$0.00</p>
                                         </div>
                                         <div class="d-flex justify-content-between">
                                             <p>Amount Paid</p>
-                                            <p>$20.00</p>
+                                            <p class="d-flex">
+                                                <span class="d-block">$</span> 
+                                                <input type="text" id= "amount" name = "amount" placeholder="0.00" style="max-width:100px;" onkeypress="return isNumberKey(event)"> 
+                                            </p>
                                         </div>
                                         <div class="d-flex justify-content-between">
                                             <p>Balance Due</p>
-                                            <p>$100.00</p>
+                                            <p id="balance">$0.00</p>
                                         </div>
                                     </div>
                                 </div>
