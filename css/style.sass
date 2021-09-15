@@ -62,6 +62,10 @@ img
     background-color: $b
     color: $w
     box-shadow: 0px 8px 12px rgba(21, 119, 234, 0.3)
+    min-width: 170px
+    min-height: 45px
+    padding: 10px
+    border-radius: 8px
     &:focus
         outline: none !important
         box-shadow: 0px 18px 20px rgba(21, 119, 234, 0.3) !important
@@ -161,19 +165,31 @@ img
 
 
 header
-    background-color: $b
+    background-color: $w
     padding: 10px 0
-    box-shadow: 0px 12px 24px rgba(21, 119, 234, 0.3)
+    box-shadow: 0px 18px 50px rgba(0, 0, 0, 0.1)
     z-index: 10
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
     a
-        color: $w
+        color: $blk
         &:hover
-            color: $w
+            color: $b
     a.navbar-brand
         font-weight: bold
         font-size: 24px
         &:hover
             color: $w
+    li
+        margin: 0 15px
+        &:last-child
+            margin-right: 0
+    li.active
+        a
+            color: $b
+            font-weight: 500
 
 .invoice-wrapper
     padding-top: 70px
@@ -332,3 +348,110 @@ header
             border: 0
             border-radius: 30px
             opacity: 0
+
+
+/* Static pages CSS */
+.hero-wrapper
+    padding: 200px 0
+    .shapes
+        position: absolute
+        inset: 0
+        pointer-events: none
+        user-select: none
+        overflow: hidden
+        img
+            position: absolute
+        .lines
+            left: -50px
+            top: 150px
+            max-width: 145px
+        .circle
+            right: -170px
+            bottom: 100px
+            max-width: 380px
+        .wave
+            bottom: 100px
+            left: 35%
+            max-width: 230px
+    .hero-content
+        h1,h2,h3,h4,h5,h6
+            font-size: 48px
+            font-weight: 500
+            color: $blk
+            margin-bottom: 30px
+            span
+                font-weight: bold
+                color: $b
+        p
+            font-size: 16px
+            margin-bottom: 30px
+
+.why-wrapper
+    &::before
+        position: absolute
+        left: 0
+        top: 0
+        width: 60%
+        height: 290px
+        background-color: $grey
+        content: ''
+    .shapes
+        position: absolute
+        inset: 0
+        pointer-events: none
+        user-select: none
+        overflow: hidden
+        img
+            position: absolute
+        .wave
+            bottom: 0
+            left: 15%
+            max-width: 230px
+    .why-content
+        padding: 50px
+        background-color: $w
+        border-radius: 8px
+        box-shadow: 0px 18px 50px rgba(0, 0, 0, 0.1)
+        margin-top: 100px
+    .why-title
+        h1,h2,h3,h4,h5,h6
+            font-size: 42px
+            color: $blk
+            margin-bottom: 30px
+    .lines
+        position: absolute
+        right: -50px
+        top: 50px
+        max-width: 145px
+
+
+.too-wrapper
+    padding: 200px 0
+    .box
+        text-align: center
+        .item
+            background-color: $w
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1)
+            border-radius: 8px
+            display: flex
+            align-items: center
+            justify-content: center
+            min-height: 130px
+            flex-direction: column
+            margin-bottom: 30px
+            &:hover
+                box-shadow: 0px 18px 50px rgba(21, 119, 234, 0.3)
+                background-color: $b
+                p,i
+                    color: $w
+
+            p
+                margin-bottom: 0
+            i
+                font-size: 25px
+                color: $b
+    .tool-content        
+        h1,h2,h3,h4,h5,h6
+            font-size: 52px
+            color: $blk
+            margin-bottom: 20px
