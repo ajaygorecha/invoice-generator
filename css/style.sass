@@ -1,7 +1,7 @@
 // Project name: Porkeris
 
 // Poppins google font
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap')
 
 // Remix Icon
 @import url('https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css')
@@ -450,8 +450,115 @@ header
             i
                 font-size: 25px
                 color: $b
-    .tool-content        
+    .tool-content
         h1,h2,h3,h4,h5,h6
             font-size: 52px
             color: $blk
             margin-bottom: 20px
+
+.invoice-feature
+    padding: 50px 0
+    &::before
+        position: absolute
+        left: 0
+        top: 0
+        width: 60%
+        content: ''
+        background-color: $b
+        height: 100%
+    .shape
+        position: absolute
+        z-index: 1
+        max-width: 150px
+        right: -50px
+        top: 20%
+    .box
+        text-align: center
+        z-index: 2
+        .item
+            background-color: $w
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1)
+            border-radius: 8px
+            display: flex
+            align-items: center
+            justify-content: center
+            min-height: 130px
+            flex-direction: column
+            margin-bottom: 30px
+            &:hover
+                box-shadow: 0px 18px 50px rgba(21, 119, 234, 0.3)
+            p
+                margin-bottom: 0
+                color: $b
+                font-size: 24px
+                font-weight: 500
+                line-height: 24px
+    .feature-content
+        *
+            color: $w
+        h1,h2,h3,h4,h5,h6
+            font-size: 52px
+                
+
+.invoice-price
+    text-align: center
+    padding: 100px 0
+    .content
+        padding-bottom: 50px
+        h1,h2,h3,h4,h5,h6
+            font-size: 52px
+            color: $blk
+            margin-bottom: 20px
+    .price-box
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1)
+        background-color: $w
+        border-radius: 8px
+        min-height: 410px
+        .title
+            padding: 20px
+            border-bottom: 1px solid $grey
+            h1,h2,h3,h4,h5,h6
+                font-size: 24px
+                color: $b
+                margin-bottom: 0
+        .details
+            padding-top: 50px
+            padding-bottom: 50px
+            li
+                margin-bottom: 10px
+        .action
+            p
+                font-size: 32px
+                font-weight: 500
+                color: $b
+            span
+                font-size: 16px
+    .active
+        box-shadow: 0px 24px 50px rgba(21, 119, 234, 0.2)
+
+.invoice-newsletter
+    margin-top: 100px
+    margin-bottom: 100px
+    .newsletter-box
+        background-color: $b
+        border-radius: 8px
+        padding: 30px
+        text-align: center
+        h1,h2,h3,h4,h5,h6
+            font-size: 52px
+            color: $w
+            margin-bottom: 20px
+        p
+            color: $w
+    .email
+        background-color: transparent
+        border: 1px solid $w !important
+        color: $w !important
+        &::placeholder
+            color: $w !important
+    .btn
+        margin: 20px auto !important
+        background-color: $w
+        border-radius: 8px
+        border: 0 !important
+        color: $b
